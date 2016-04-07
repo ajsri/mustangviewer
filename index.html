@@ -1,0 +1,19 @@
+<!doctype html>
+	<head>
+		<style>
+			#year, #year-slider {
+				width: 600px;
+			}
+		</style>
+	</head>
+	<body>
+		<img id="year" src="./img/mustang(1963).gif"/><br/>
+		<input type="range" id="year-slider" min="1963" max="2015" value="1963">
+	</body>
+	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<script>
+			$('#year-slider').on('input', function(e){
+				$('#year').attr('src', './img/mustang(' + this.value + ').gif');
+			});
+	</script>
+</html>
